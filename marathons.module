@@ -1,0 +1,30 @@
+<?php
+
+function marathons_menu() {
+  $items['admin/content/marathons/import'] = array(
+    'page callback' => 'marathon_import_csv',
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+
+function marathon_import_csv(){
+  $filename = drupal_get_path('module', 'marathons') . '/data/marathons.csv';
+  $data = _retrieve_data($filename);
+  $header = array_shift($data);
+  $output = theme('table', array('rows' => $data, 'header' => $header));
+  return $output;
+}
+
+
+function _retrieve_data($filename){
+  $output = array();
+  $fh = fopen($filename, 'r');
+  while(($data = fgetcsv($fh, 1000, ",")) != FALSE) {
+   $output[] = explode(';', $data[0]);
+  }
+  fclose($fh);
+  return $output;
+}

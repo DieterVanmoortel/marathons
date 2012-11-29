@@ -1,0 +1,59 @@
+<?php
+/*
+ * Implements hook_schema
+ */
+function marathons_schema() {
+// use the map_coordinates table to store lat & lon for entities
+  $schema['marathon_raw'] = array(
+    'description' => t('Contains raw data to be processed into nodes'),
+      'fields' => array(
+        'name' => array(
+          'type' => 'varchar',
+          'length' => '128',
+          'not null' => TRUE,
+        ),
+        'city' => array(
+          'type' => 'varchar',
+          'length' =>'25',
+          'not null' => TRUE,
+        ),
+        'country' => array(
+          'type' => 'varchar',
+          'length' => '25',
+          'not null' => TRUE,
+        ),
+        'distance' => array(
+          'type' => 'varchar',
+          'length' => '25',
+        ),
+        'alt' => array(
+          'type' => 'varchar',
+          'length' => '25',
+        ),
+        'days' => array(
+          'type' => 'varchar',
+          'length' => '25',
+          'default' => 1,
+
+        ),
+        'url' => array(
+          'type' => 'varchar',
+          'length' => '25',
+        ),
+        'created' => array(
+          'type' => 'varchar',
+          'length' => '12',
+        ),
+      ),
+        'primary key' => array('name'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function marathons_uninstall() {
+  drupal_uninstall_schema('marathon_raw');
+}

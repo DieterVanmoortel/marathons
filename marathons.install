@@ -12,42 +12,33 @@ function marathons_schema() {
           'length' => '128',
           'not null' => TRUE,
         ),
-        'city' => array(
+        'date' => array(
           'type' => 'varchar',
-          'length' =>'25',
-          'not null' => TRUE,
+          'length' => '12',
         ),
-        'country' => array(
-          'type' => 'varchar',
-          'length' => '25',
-          'not null' => TRUE,
-        ),
-        'distance' => array(
-          'type' => 'varchar',
-          'length' => '25',
-        ),
-        'alt' => array(
-          'type' => 'varchar',
-          'length' => '25',
-        ),
-        'days' => array(
-          'type' => 'varchar',
-          'length' => '25',
-          'default' => 1,
-
-        ),
-        'url' => array(
-          'type' => 'varchar',
-          'length' => '25',
+        'data' => array(
+          'type' => 'blob',
         ),
         'created' => array(
           'type' => 'varchar',
           'length' => '12',
         ),
       ),
-        'primary key' => array('name'),
+      'primary key' => array('name'),
   );
-
+  $schema['marathon_archive'] = array(
+    'description' => t('Marathons data archive'),
+    'fields' => array(
+      'date' => array(
+        'type' => 'varchar',
+        'length' => '12'
+      ),
+      'data' => array(
+        'type' => 'blob',
+        'size' => 'big',
+      )
+    )
+  );
   return $schema;
 }
 
@@ -56,4 +47,5 @@ function marathons_schema() {
  */
 function marathons_uninstall() {
   drupal_uninstall_schema('marathon_raw');
+  drupal_uninstall_schema('marathon_archive');
 }

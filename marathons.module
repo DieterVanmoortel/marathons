@@ -1,91 +1,66 @@
 <?php
 
+module_load_include('inc', 'marathons', 'includes/marathons.helpers');
+
+/*
+ * Implements hook_permission
+ */
+function marathons_permission(){
+  return array(
+    'administer marathons' => array(
+      'title' => t('Manage marathons')
+    ),
+    'import events' => array(
+      'title' => t('Import new events'),
+    ),
+    'export events' => array(
+      'title' => t('Export events list'),
+    ),
+  );
+}
+
+/*
+ * Implements hook_menu
+ */
 function marathons_menu() {
   $items['admin/content/marathons'] = array(
     'title' => 'Marathons',
     'page callback' => 'marathon_overview',
-    'access arguments' => array('access content'),
+    'file' => 'includes/marathons.admin.inc',
+    'access arguments' => array('administer marathons'),
     'type' => MENU_NORMAL_ITEM,
   );
   $items['admin/content/marathons/overview'] = array(
     'title' => 'Overview',
     'page callback' => 'marathon_overview',
-    'access arguments' => array('access content'),
+    'access arguments' => array('administer marathons'),
+    'file' => 'includes/marathons.admin.inc',
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => 0,
   );
   $items['admin/content/marathons/export'] = array(
     'title' => 'Export list',
     'page callback' => 'marathon_output_csv',
-    'access arguments' => array('access content'),
+    'access arguments' => array('export events'),
+    'file' => 'includes/marathons.admin.inc',
     'type' => MENU_LOCAL_TASK,
     'weight' => 1,
   );
   $items['admin/content/marathons/import'] = array(
     'title' => 'Import file',
     'page callback' => 'marathon_import_csv',
-    'access arguments' => array('access content'),
+    'file' => 'includes/marathons.admin.inc',
+    'access arguments' => array('import events'),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 2,
+  );
+  $items['admin/content/marathons/process'] = array(
+    'title' => 'Process imported events',
+    'page callback' => 'marathons_process_csv',
+    'file' => 'includes/marathons.admin.inc',
+    'access arguments' => array('import events'),
     'type' => MENU_LOCAL_TASK,
     'weight' => 2,
   );
   return $items;
-}
-
-
-function marathon_overview(){
-  $out = 'Marathons overview page';
-  $out .= marathon_import_csv();
-  return $out;
-}
-function marathon_export_csv(){
-  $filename = drupal_get_path('module', 'marathons') . '/data/marathons.csv';
-  $data = _retrieve_data($filename);
-}
-
-function marathon_import_csv(){
-  $filename = drupal_get_path('module', 'marathons') . '/data/marathons.csv';
-  $data = _retrieve_data($filename);
-  $header = array_shift($data);
-  $output = theme('table', array('rows' => $data, 'header' => $header));
-
-  return $output;
-}
-
-/**
- * Read from csv
- *
- * @param type $filename
- */
-function _retrieve_data($filename){
-  $output = array();
-  $fh = fopen($filename, 'r');
-  while(($data = fgetcsv($fh, 1000, ",")) != FALSE) {
-   $output[] = explode(';', $data[0]);
-  }
-  fclose($fh);
-  return $output;
-}
-
-/**
- * Direct csv output ( open / save )
- *
- * @param type $data
- * @param type $filename
- */
-function output_csv($data, $filename = 'list.csv') {
-  $outputfile = str_replace('.csv', '_'. date('d_M_Y', time()). '.csv', $filename);
-  header('Pragma', 'public');
-  header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
-  header('Content-Type: application/octet-stream');
-  header('Content-Disposition: attachment; filename=' . $outputfile . ';');
-  $tmp = file_directory_temp();
-  $fp = fopen($tmp . '/'. $filename, 'w');
-  foreach ((array)$data as $row) {
-    fputcsv($fp, $row);
-  }
-  fclose($fp);
-  ob_clean();
-  flush();
-  readfile($tmp . '/' . $filename);
-  exit;
 }

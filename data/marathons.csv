@@ -24,8 +24,8 @@
 ;Biebergrund Bike Marathon;Roßbach;95;2450;D;;
 ;Bike Fest Pfronten;Pfronten;70;2600;D;;
 ;Bikefestival Willingen;Willingen;123;3500;D;;
-41455;Bilstein Bike Marathon;Grobalmerode;106;2600;D;;
-41448;Black forest ultra bike-marathon;Kirchzarten;116;3150;D;;
+30/06/2013;Bilstein Bike Marathon;Grobalmerode;106;2600;D;;
+23/06/2013;Black forest ultra bike-marathon;Kirchzarten;116;3150;D;;
 ;Dunsberg Marathon;Biebertal-Hessen;108;2740;D;;
 ;Erbeskopf bike marathon;Deuselbach;110;3100;D;;
 ;Erzgebirgsmarathon;Seiffen;100;2600;D;;
@@ -34,15 +34,15 @@
 ;Frankische-Schweiz Marathon;Bamberg;80;1600;D;;
 ;Gasbock MTB Marathon;Lambrecht;80;2000;D;;
 ;Ghost Sauerland Marathon;Schmallerberg-Grafschaft;109;3730;D;;
-41403;Harzer MTB Event;Altenau;120;2250;D;;
+9/05/2013;Harzer MTB Event;Altenau;120;2250;D;;
 ;Keiler-Bike Marathon;Wombach;84;2200;D;;
-41385;Kellerwald bike marathon;Gilserberg;120;2880;D;;
+21/04/2013;Kellerwald bike marathon;Gilserberg;120;2880;D;;
 ;Ketterer Bike Marathon;Bad Wildbad;83;2290;D;;
 ;Koening Ludwig Bike Cup;Oberammergau;80;2400;D;;
 ;Langenberg Marathon;Orstsmitte-Wiemeringshausen;83;2000;D;;
 ;Lautertal-Bikemarathon;Spiegelberg;81;2205;D;;
 ;Mad East Challenge;Geising;220;4900;D;3;
-41391;Mega sports Bikefestival;Sundern-Hagen;100;2300;D;;
+27/04/2013;Mega sports Bikefestival;Sundern-Hagen;100;2300;D;;
 ;Nordenau Marathon;Nordenau;63;1600;D;;
 ;Odenwald MTB Marathon;Hirschberg;90;2400;D;;
 ;P-Weg Marathon;Plettenberg;88;2343;D;;
@@ -63,7 +63,7 @@
 5/06/2013;Trans Germany;Garmish-Partenkirchen;300;10000;D;4;
 ;Veloclub Lechhausen mtb cup;Affing;102;1820;D;;
 ;Vulkanbike;Daun;85;2000;D;;
-41392;Vulkanmarathon;Schotten;90;2090;D;;
+28/04/2013;Vulkanmarathon;Schotten;90;2090;D;;
 ;Wasgau Mountainbike Marathon;Lemberg / Pfalz;105;2300;D;;
 ;Weidatal Bike Marathon;07950 Weibendorf;99;2100;D;;
 ;Wiesbaden Marathon;Wiesbaden;71;2055;D;;
@@ -85,52 +85,52 @@
 ;Extrem Loue ;Ornans;84;2500;FR;;
 ;Kasseienvretentocht;Templeuve;96-108-132;;FR;;
 ;La Forestiere;Arbent;100;2300;FR;;
-41419;La Medocaine;Arsac-Medoc;80;;FR;;
+25/05/2013;La Medocaine;Arsac-Medoc;80;;FR;;
 ;La Rochefortiche;Rochefort;80-100;1200;FR;;
 ;La Transpyrénées;Encausse les Thermes;80;2200;FR;;
-41462;MBRace;Combloux;100-140;4800-6600;FR;;
+7/07/2013;MBRace;Combloux;100-140;4800-6600;FR;;
 ;Oxygen Challenge;Super Lioran;85;3800;FR;;
 ;Paris-Roubaix VTT;Wallers-Arenberg;120 or less;;FR;;
 ;Raid Cap Nore;Villegly-Aude;80-100;1800-2600;FR;;
 ;Raid Imperial;Compiegne;105;1740;FR;;
 ;Raid l'Alpes-Provence;Seyne Les Alpes;160;4000;FR;3;
 ;Roc d'Azur;Fregus;83;2700;FR;;
-41440;Roc Des Alpes  new;La Clusaz;85;;FR;;
-41371;Roc Laissagais;Laissac;84;2685;FR;;
+15/06/2013;Roc Des Alpes  new;La Clusaz;85;;FR;;
+7/04/2013;Roc Laissagais;Laissac;84;2685;FR;;
 ;Trans Piades;St-Julien Le Montagnier;80-100;2600;FR;;
 28/09/2013;Transprovence;Tallard;320;9500;FR;7;
 ;Transvesubienne;La Colmiane;86;3300;FR;;
 22/09/2013;Ultra Raid de la Meije;Villar d'Aréne;112;5150;FR;2;http://www.ultraraidlameije.fr/
-41539;Ultra Raid de la Meije new;Villar d'Aréne;112;5150;FR;;
+22/09/2013;Ultra Raid de la Meije new;Villar d'Aréne;112;5150;FR;;
 ;Roc d'Azur Marathon;Fréjus;83;2700;FR;;http://www.rocazur.com/
 ;Tour de France VTT;Niort;?;?;FR;8;
 ;Balaton Marathon;Balatonfured;117;;Hun;;
 ;Duna Marathon;Visegrad;92;3000;Hun;;
-41461;Dolomiti Superbike;Niederdorf-Villabassa;110;3350;I;;
-41399;Bike Marathon Garda Trentino;Riva Del Garda;105;3561;I;;
+6/07/2013;Dolomiti Superbike;Niederdorf-Villabassa;110;3350;I;;
+5/05/2013;Bike Marathon Garda Trentino;Riva Del Garda;105;3561;I;;
 ;Sellaronda Hero;Selva Val Gardena;82;4200;I;;
 ;Val Di Fassa Bike  UCI series;Moena;64;2760;I;;
 6/07/2013;Dolomiti Super Bike;Niederdorf;111;3000;I;;http://www.dolomitisuperbike.com/
 20/07/2013;Iron Bike;Salluzzo;650;22000;I;8;
-41399;Aischdall Bike;Hobscheid;85-113;2400;Lux;;
-41406;Rothaus Singen Marathon;Singen;75;2400;Lux;;
+5/05/2013;Aischdall Bike;Hobscheid;85-113;2400;Lux;;
+12/05/2013;Rothaus Singen Marathon;Singen;75;2400;Lux;;
 ;UCP Bike Marathon;Hobscheid;83;1900;Lux;;
 ;Duchene Heroes;Luxemburg-Amsterdam;700;;Lux-Ned;7;
 16/03/2013;Transmarocaine;Quarzazate;250;;Marocco;5;http://www.transmarocaine.org/
 30/08/2013;Mongolia Bikechallenge  new;Ulaanbaator ??;1400;14000;Mong;9;
 19/05/2013;Namib Quest;Windhoek;440;;Namibië;6;
-41343;Ameland  x-treme;Nes;90;;NL;;
+10/03/2013;Ameland  x-treme;Nes;90;;NL;;
 ;ATB Tocht;Riethoven;65;;NL;;
 ;Bart Brentjens Challenge;Eijsden;100;2200;NL;;
-41343;De 8 van Oost Brabant;Mill;80-100-120;;NL;;
+10/03/2013;De 8 van Oost Brabant;Mill;80-100-120;;NL;;
 ;Drenthes Mooiste;Assen;80;;NL;;
 23-24/3/13;Gert Jan Theunisse Classic;De Rips;55-65-115;;NL;;
-41238;Holterbergclassic;Nijverdal;75;;NL;;
+25/11/2012;Holterbergclassic;Nijverdal;75;;NL;;
 ;Hondsrug Classic;Gieten;55;;NL;;
 ;Limburgs Mooiste;Parkstad-Limburg;70-110;;NL;;
-41337;Specialized Mtb Tocht;Gulpen;70;1350;NL;;http://www.mtbtourtochtgulpen.nl/
+4/03/2013;Specialized Mtb Tocht;Gulpen;70;1350;NL;;http://www.mtbtourtochtgulpen.nl/
 ;Wilgenweard Wintermarathon;Lemelerveld;75-100;;NL;;
-feb/13;Alpine Epic;Mt Somers;259;5250;New ZL;5;http://www.alpineepic.co.nz/
+1/02/2013;Alpine Epic;Mt Somers;259;5250;New ZL;5;http://www.alpineepic.co.nz/
 ;Birkebeinerrittet;Rena Lillehammer;94;;Noorw;;
 ;Styrkeproven;Trondheim;540;4648;Nor;3;
 ;Bike the bugles MTB-Marathon;Bucklige Welt/Krumbach;64;2400;O;;
@@ -141,9 +141,8 @@ feb/13;Alpine Epic;Mt Somers;259;5250;New ZL;5;http://www.alpineepic.co.nz/
 ;Grimming MTB-Marathon;Bad Mitterndorf;78;2750;O;;
 ;Hrinkow Marathon;Reichraming;70;2050;O;;
 ;Ironbike;Ischgl;79;3820;O;;
-41454;Kitz Alp Bike;Kirchberg;95;4400;O;;
+29/06/2013;Kitz Alp Bike;Kirchberg;95;4400;O;;
 ;Kremstal Challenge;Reinprechts/Waldviertel;72;1600;O;;
-;Montafon Marathon;Schruns;120;4200;O;;
 ;Naturpark Pollauer Tal;Pöllau bei Hartberg;75;2500;O;;
 ;Neumarkter Natur-Bike Marathon;Neumarkt-Steiermark;80;1570;O;;
 ;Salzkammergut MTB Trophy;Bad Goisern;119;3800;O;;
@@ -155,38 +154,36 @@ feb/13;Alpine Epic;Mt Somers;259;5250;New ZL;5;http://www.alpineepic.co.nz/
 ;Weinsteinbike Wachau;Mühldorf;74;3500;O;;
 ;Wolfsberger Natur MTB;Wolfsberg;70;1450;O;;
 ;World Games of Mountainbike;Saalbach-Hinterglemm;80;3678;O;;
-;Zillertal Bikechallenge;Fügen;203;10046;O;3;
+;Zillertal Bikechallenge;Fügen;203;10046;O;3;http://www.zillertal-bikechallenge.com/
 30/01/2013;Transhajar;Oman;335;4650;Oman;4;http://www.transhajar.com/
 ;Montafon Marathon;Schruns;145;4400;O;;http://www.montafon-m3.at/
 ;Salzkammerguttrophy;Bad Goisern;208;7000;O;;http://www.salzkammergut-trophy.at/
 30/06/2013;Transtirol Bikerallye;Archensee;285;9270;O / IT;5;
 14/06/2013;La Lozerienne;Mende-Mende;103;1900;Pol;3;
-;Bike Challenge;Duszniki Zdrój;400;12000;Polen;6;
-5/05/2013;Transalgarve;Villa Real de Santo Antonio;426;9125;Port;5;
-;Transgharb;Faro;700;;Port;7;
-4/05/2013;Transportugal;Branganqa;1150;21000;Port;9;
-8/03/2013;VeloAfrique;Dakar;550;;Senegal;10;
-;Kosicky Bike Marathon;Kosicky;85;3000;Slo;;
-;Dema Horal Alto Marathon;Svit;104;3300;Slov;;
+;Sudety Bike Challenge;Duszniki Zdrój;400;12000;Polen;6;http://www.mtbchallenge.com/
+5/05/2013;Transalgarve;Villa Real de Santo Antonio;426;9125;Port;5;http://www.transallgarve.com
+;Transgharb;Faro;700;;Port;7;http://www.altimetria.pt
+4/05/2013;Transportugal;Branganqa;1150;21000;Port;9;http://www.trans-portugal.com
+8/03/2013;VeloAfrique;Dakar;550;;Senegal;10;http://www.veloafrique.be/
+;Kosicky Bike Marathon;Kosicky;85;3000;Slo;;http://www.1kbm.sk
+;Dema Horal Alto Marathon;Svit;104;3300;Slov;;http://www.horal.sk
 24/02/2013;Adalucia Bike Race;Cordoba;410;12000;Spa;6;http://www.andaluciabikerace.com/
-;Bike Marathon La Palma;Playa Del Aguila;80;;Spa;;
-41370;Open MTB Gran Canaria;Maspalomas-Gran Canaria;85;2350;Spa;;
-6/07/2013;Transpyr  ;Roses;820;20000;Spa;8;
-;Malevil Cup;Jablonne v podjestedi;102;2690;Tsj;;
-;Trail Masters;Llanwrtyd Wells;220;;Wales;3;
-;Iron Bike Race;Einsiedeln;101;3600;Zwi;;
+;Bike Marathon La Palma;Playa Del Aguila;80;;Spa;;http://www.bikelapalma.com/
+6/04/2013;Open MTB Gran Canaria;Maspalomas-Gran Canaria;85;2350;Spa;;http://nyx.at/canary/
+6/07/2013;Transpyr  ;Roses;820;20000;Spa;8;http://www.transpyr.com/es/
+;Malevil Cup;Jablonne v podjestedi;102;2690;Tsj;;http://www.paklisport.cz/
+;Trail Masters;Llanwrtyd Wells;220;;Wales;3;http://www.trailmasters.cc/
+;Iron Bike Race;Einsiedeln;101;3600;Zwi;;http://www.iron-bike.ch
 ;O Tour Bike Challenge  UCI series;Alpnach;87;3300;Zwi;;
-17/03/2013;The Cape Epic;Capetown;698;15900;Z Afr;8;
-;Aletisch Bike Marathon ;Bettmeralp;91;4800;Zwi;;
-;Bikemarathon Lumnezia;Lumbrein;72;3200;Zwi;;
-;Eiger Bike-Challenge;Grindelwald;88;3900;Zwi;;
-;EKS Goldenrace;Schleitheim-Schaffhausen;83;2600;Zwi;;
-;Elsa Bike Trophy;Estavayer-Le-Lac;60;1450;Zwi;;
-23-24/8/13;Grand Raid Cristalp;Verbier;125;5025;Zwi;;
-;Monte Generoso Marathon;Mendrisio;94;3500;Zwi;;
-41517;Nationalpark Bike Marathon;Scuol;138;4010;Zwi;;
-41476;Swiss Bike Masters;Kublis;105;4400;Zwi;;
-18/08/2013;Nutrixxion MTB Rally;Rorschach;400;12900;Zwi-Oost-Ita;6;
+17/03/2013;The Cape Epic;Capetown;698;15900;Z Afr;8;http://www.cape-epic.com/
+;Aletisch Bike Marathon ;Bettmeralp;91;4800;Zwi;;http://www.aletsch-bikemarathon.ch/
+;Bikemarathon Lumnezia;Lumbrein;72;3200;Zwi;;http://www.bikemarathon-lumnezia.ch/
+;Eiger Bike-Challenge;Grindelwald;88;3900;Zwi;;http://www.eigerbike.ch/
+;EKS Goldenrace;Schleitheim-Schaffhausen;83;2600;Zwi;;http://www.goldenrace.ch/
+;Elsa Bike Trophy;Estavayer-Le-Lac;60;1450;Zwi;;http://www.elsabiketrophy.ch/
+;Monte Generoso Marathon;Mendrisio;94;3500;Zwi;;http://www.momobike.ch/
+31/08/2013;Nationalpark Bike Marathon;Scuol;138;4010;Zwi;;http://www.bike-marathon.com/
+18/08/2013;Nutrixxion MTB Rally;Rorschach;400;12900;Zwi-Oost-Ita;6;http://www.mountain-rally.ch
 23/08/2013;Grand Raid Cristalp;Verbier;145;5800;Zwi;;http://www.grand-raid-cristalp.ch/
 31/08/2013;NationalPark Bikemarathon;Scuol;138;4010;Zwi;;http://www.bike-marathon.com/
 21/07/2013;Swiss Bike Masters;Kubis;105;4400;Zwi;;www.eurobike.ch

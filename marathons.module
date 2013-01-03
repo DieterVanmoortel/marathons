@@ -64,3 +64,16 @@ function marathons_menu() {
   );
   return $items;
 }
+
+/*
+ * Impmentation of hook_migrate_api()
+ */
+function marathons_migrate_api() {
+  $api = array(
+    'api' => 2,
+    'migrations' => array(
+      'marathons' => array('class_name' => 'MarathonsMigration'),
+    )
+  );
+  return $api;
+}

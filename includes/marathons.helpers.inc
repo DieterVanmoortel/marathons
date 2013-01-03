@@ -5,10 +5,18 @@
 function _write_data_to_db($data) {
   backup_and_emtpy_db($data);
   $errors = 0;
+  $fields = array(
+    'city',
+    'distances',
+    'altimeters',
+    'country',
+    'days',
+    'website',
+  );
   foreach((array)$data as $row) {
     $date = array_shift($row);
     $name = array_shift($row);
-    $data = $row;
+    $data = array_combine($fields, $row);
     if(!empty($name)){
       try{
         db_insert('marathon_raw')
@@ -35,34 +43,37 @@ function marathons_get_data_from_db(){
 }
 
 function backup_and_emtpy_db($data) {
-  if(!empty($data)){
-  db_insert('marathon_archive')
+  if(!empty($data)){ // write to archives
+    $result = db_insert('marathon_archive')
     ->fields(array(
-      'date' => REQUEST_TIME,
+      'created' => REQUEST_TIME,
       'data' => serialize($data),
     ))
     ->execute();
+    if ($result == '0') {
+      db_truncate('marathon_raw')->execute(); // empty db
+    }
 
-    db_truncate('marathon_raw')->execute(); // empty db
   }
-}
-
-
-/*
- * Prepare a new event node
- */
-function setup_new_event_node($data) {
-  $node = new stdClass();
-  $node->title = $data->name;
-  $node->type = 'event';
-  $node->is_new = TRUE;
-  node_object_prepare($node);
-  return $node;
 }
 
 /**
 *********************** CSV IN / OUT ******************************
- */
+*/
+function marathon_import_csv(){
+  $filename = drupal_get_path('module', 'marathons') . '/data/marathons_short.csv';
+  if(file_exists($filename)){
+    $data = _retrieve_data($filename);
+    if(!empty($data)){
+      $header = array_shift($data);
+      $output = t('The following rows were stored in the database:');
+      $output .= theme('table', array('rows' => $data, 'header' => $header));
+      _write_data_to_db($data);
+      return $output;
+    }
+  }
+}
+
 function _retrieve_data($filename){
   $output = array();
   $fh = fopen($filename, 'r');
@@ -72,6 +83,7 @@ function _retrieve_data($filename){
   fclose($fh);
   return $output;
 }
+
 function output_csv($data, $filename = 'list.csv') {
   $outputfile = str_replace('.csv', '_'. date('d_M_Y', time()). '.csv', $filename);
   header('Pragma', 'public');

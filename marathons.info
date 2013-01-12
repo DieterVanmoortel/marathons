@@ -4,3 +4,20 @@ version = 7.x-dev
 
 core = 7.x
 php = 5.3
+
+dependencies[] = date
+dependencies[] = features
+dependencies[] = field_sql_storage
+dependencies[] = node
+dependencies[] = number
+dependencies[] = text
+features[features_api][] = api:1
+features[field][] = node-marathon-field_city
+features[field][] = node-marathon-field_country
+features[field][] = node-marathon-field_date
+features[field][] = node-marathon-field_days
+features[field][] = node-marathon-field_distances
+features[field][] = node-marathon-field_website
+features[field][] = node-webform-body
+features[node][] = marathon
+features[user_role][] = Editor

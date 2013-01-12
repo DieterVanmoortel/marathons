@@ -1,6 +1,7 @@
 <?php
 
 module_load_include('inc', 'marathons', 'includes/marathons.helpers');
+include_once 'marathons.features.inc';
 
 /*
  * Implements hook_permission

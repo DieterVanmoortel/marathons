@@ -28,7 +28,6 @@ class MarathonsMigration extends Migration {
       ),
       MigrateDestinationNode::getKeySchema()
     );
-
     //Field mapping
     $this->addFieldMapping('title', 'name' );
     $this->addFieldMapping('field_date', 'date' );
@@ -38,6 +37,7 @@ class MarathonsMigration extends Migration {
     $this->addFieldMapping('field_days','days');
     $this->addFieldMapping('field_website','website');
   }
+  
   public function prepareRow($row) {
     // convert date to UNIX timestamp
     if(!empty($row->date)) {
@@ -46,7 +46,6 @@ class MarathonsMigration extends Migration {
     }
     // build other fields
     $data = unserialize($row->data);
-    $row->date = REQUEST_TIME;
     foreach((array)$data as $key => $value){
       switch($key){
         case 'days':
@@ -55,6 +54,7 @@ class MarathonsMigration extends Migration {
       }
       $row->$key = $value;
     }
+    unset($row->data);
     return TRUE;
   }
 }

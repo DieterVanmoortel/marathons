@@ -3,6 +3,7 @@
 function marathon_overview(){
   $out = 'Marathons overview page';
   $data = process_data_from_db();
+  if(!$data){return t('No data in database.');}
   $header = array_keys(current($data));
   $out = t('The following rows are stored in the database:');
   $out .= theme('table', array('rows' => $data, 'header' => $header));
@@ -13,9 +14,8 @@ function marathon_export_csv(){
   return 'This function is temporarily disabled';
 }
 
-function marathon_import_csv_form(&$form, &$form_state) {
+function marathon_import_csv_form() {
   $form = array();
-  $form ['#attributes'] = array ('enctype' => "multipart/form-data" );
   $form['upload'] = array(
     '#type' => 'file',
     '#title' => t('Choose a csv file'),
@@ -24,18 +24,19 @@ function marathon_import_csv_form(&$form, &$form_state) {
   );
   $form['submit'] = array(
     '#type' => 'submit',
-    '#value' => 'Import Marathons'
+    '#value' => 'Import csv file'
   );
   return $form;
 }
 
 function marathon_import_csv_form_validate(&$form, &$form_state){
   $validators = array('file_validate_extensions' => array('csv')); // allow all extensions
-  $file = file_save_upload('upload', $validators, FALSE, FILE_EXISTS_REMOVE);
+  $file = file_save_upload('upload', $validators, FALSE, FILE_EXISTS_REPLACE);
   $form_state['upload'] = $file->uri;
 }
 
 function marathon_import_csv_form_submit(&$form, &$form_state) {
-  marathon_import_csv($form_state['upload']);
+  marathon_import_csv($form_state['upload']);  
+  $form_state['redirect'] = 'admin/content/marathons';
 }
 

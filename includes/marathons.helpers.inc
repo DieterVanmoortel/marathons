@@ -40,14 +40,17 @@ function _write_data_to_db($data) {
 
 function process_data_from_db() {
   $data = marathons_get_data_from_db();
-  foreach($data as $name => $row){
-    $rowdata = unserialize($row->data);
-    $out[$row->name]['name'] = $row->name;
-    foreach((array)$rowdata as $key => $value) {
-      $out[$row->name][$key] = $value;
+  dpm($data);
+  if($data){
+    foreach($data as $name => $row){
+      $rowdata = unserialize($row->data);
+      $out[$row->name]['name'] = $row->name;
+      foreach((array)$rowdata as $key => $value) {
+        $out[$row->name][$key] = $value;
+      }
     }
+    return $out;
   }
-  return $out;
 }
 
 function marathons_get_data_from_db() {

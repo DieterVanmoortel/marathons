@@ -39,31 +39,31 @@ function marathons_menu() {
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => 0,
   );
-  $items['admin/content/marathons/export'] = array(
-    'title' => 'Export list',
-    'page callback' => 'marathon_output_csv',
-    'access arguments' => array('export events'),
-    'file' => 'includes/marathons.admin.inc',
-    'type' => MENU_LOCAL_TASK,
-    'weight' => 1,
-  );
+//  $items['admin/content/marathons/export'] = array(
+//    'title' => 'Export list',
+//    'page callback' => 'marathon_output_csv',
+//    'access arguments' => array('export events'),
+//    'file' => 'includes/marathons.admin.inc',
+//    'type' => MENU_LOCAL_TASK,
+//    'weight' => 1,
+//  );
   $items['admin/content/marathons/import'] = array(
     'title' => 'Import file',
     'page callback' => 'drupal_get_form',
-    'page callback' => array('marathon_import_csv_form'),
+    'page arguments' => array('marathon_import_csv_form'),
     'file' => 'includes/marathons.admin.inc',
     'access arguments' => array('import events'),
     'type' => MENU_LOCAL_TASK,
     'weight' => 2,
   );
-  $items['admin/content/marathons/process'] = array(
-    'title' => 'Process imported events',
-    'page callback' => 'marathons_process_csv',
-    'file' => 'includes/marathons.admin.inc',
-    'access arguments' => array('import events'),
-    'type' => MENU_LOCAL_TASK,
-    'weight' => 2,
-  );
+//  $items['admin/content/marathons/process'] = array(
+//    'title' => 'Process imported events',
+//    'page callback' => 'marathons_process_csv',
+//    'file' => 'includes/marathons.admin.inc',
+//    'access arguments' => array('import events'),
+//    'type' => MENU_LOCAL_TASK,
+//    'weight' => 2,
+//  );
   return $items;
 }
 

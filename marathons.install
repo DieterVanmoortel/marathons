@@ -29,7 +29,7 @@ function marathons_schema() {
   $schema['marathon_archive'] = array(
     'description' => t('Marathons data archive'),
     'fields' => array(
-      'date' => array(
+      'created' => array(
         'type' => 'varchar',
         'length' => '12'
       ),

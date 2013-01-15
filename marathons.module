@@ -1,7 +1,7 @@
 <?php
 
 module_load_include('inc', 'marathons', 'includes/marathons.helpers');
-include_once 'marathons.features.inc';
+include_once 'features/marathons.features.inc';
 
 /*
  * Implements hook_permission
@@ -49,7 +49,8 @@ function marathons_menu() {
   );
   $items['admin/content/marathons/import'] = array(
     'title' => 'Import file',
-    'page callback' => 'marathon_import_csv',
+    'page callback' => 'drupal_get_form',
+    'page callback' => array('marathon_import_csv_form'),
     'file' => 'includes/marathons.admin.inc',
     'access arguments' => array('import events'),
     'type' => MENU_LOCAL_TASK,
@@ -64,4 +65,31 @@ function marathons_menu() {
     'weight' => 2,
   );
   return $items;
+}
+
+/*
+ * Impmentation of hook_migrate_api()
+ */
+function marathons_migrate_api() {
+  $api = array(
+    'api' => 2,
+    'migrations' => array(
+      'marathons' => array('class_name' => 'MarathonsMigration'),
+    )
+  );
+  return $api;
+}
+
+
+/*
+ * Implements hook_markers_alter
+ */
+
+function marathons_markers_alter($markers) {
+  foreach($markers as $key => $marker){
+    if (isset($marker['field_event_date'])) {
+      $markers[$key]['month'] =  format_date($marker['field_event_date'], 'custom', 'n');
+    }
+  }
+  return $markers;
 }

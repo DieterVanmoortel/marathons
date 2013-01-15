@@ -13,7 +13,7 @@ class MarathonsMigration extends Migration {
     $this->source = new MigrateSourceSQL($query);
     
     //The destination CCK (bundle)
-    $this->destination = new MigrateDestinationNode('event');
+    $this->destination = new MigrateDestinationNode('marathon');
 
     //Source and destination relation for rollbacks
     $this->map = new MigrateSQLMap(
@@ -31,12 +31,12 @@ class MarathonsMigration extends Migration {
 
     //Field mapping
     $this->addFieldMapping('title', 'name' );
-    $this->addFieldMapping('field_event_date', 'date' );
-    $this->addFieldMapping('field_event_city', 'city' );
-    $this->addFieldMapping('field_event_country','country');
-    $this->addFieldMapping('field_event_distances','distance');
-    $this->addFieldMapping('field_event_days','days');
-    $this->addFieldMapping('field_event_website','website');
+    $this->addFieldMapping('field_date', 'date' );
+    $this->addFieldMapping('field_city', 'city' );
+    $this->addFieldMapping('field_country','country');
+    $this->addFieldMapping('field_distances','distance');
+    $this->addFieldMapping('field_days','days');
+    $this->addFieldMapping('field_website','website');
   }
   public function prepareRow($row) {
     // convert date to UNIX timestamp

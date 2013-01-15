@@ -38,7 +38,19 @@ function _write_data_to_db($data) {
   }
 }
 
-function marathons_get_data_from_db(){
+function process_data_from_db() {
+  $data = marathons_get_data_from_db();
+  foreach($data as $name => $row){
+    $rowdata = unserialize($row->data);
+    $out[$row->name]['name'] = $row->name;
+    foreach((array)$rowdata as $key => $value) {
+      $out[$row->name][$key] = $value;
+    }
+  }
+  return $out;
+}
+
+function marathons_get_data_from_db() {
    return db_query('SELECT * FROM {marathon_raw}')->fetchAllAssoc('name');
 }
 
@@ -60,16 +72,12 @@ function backup_and_emtpy_db($data) {
 /**
 *********************** CSV IN / OUT ******************************
 */
-function marathon_import_csv(){
-  $filename = drupal_get_path('module', 'marathons') . '/data/marathons_short.csv';
+function marathon_import_csv($filename) {
   if(file_exists($filename)){
     $data = _retrieve_data($filename);
     if(!empty($data)){
       $header = array_shift($data);
-      $output = t('The following rows were stored in the database:');
-      $output .= theme('table', array('rows' => $data, 'header' => $header));
       _write_data_to_db($data);
-      return $output;
     }
   }
 }

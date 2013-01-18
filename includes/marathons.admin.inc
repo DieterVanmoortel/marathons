@@ -1,9 +1,8 @@
 <?php
 
 function marathon_overview(){
-  $out = 'Marathons overview page';
   $data = process_data_from_db();
-  if(!$data){return t('No data in database.');}
+  if (empty($data)) {return t('No data in database.');}
   $header = array_keys(current($data));
   $out = t('The following rows are stored in the database:');
   $out .= theme('table', array('rows' => $data, 'header' => $header));

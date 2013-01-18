@@ -1,5 +1,5 @@
 name = marathons
-description = MTB Marathons Calendar
+description = Mtb Marathons specific Module
 
 core = 7.x
 php = 5.3

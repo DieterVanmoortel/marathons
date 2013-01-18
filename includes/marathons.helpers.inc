@@ -39,8 +39,8 @@ function _write_data_to_db($data) {
 }
 
 function process_data_from_db() {
+  $out = array();
   $data = marathons_get_data_from_db();
-  dpm($data);
   if($data){
     foreach($data as $name => $row){
       $rowdata = unserialize($row->data);
@@ -49,8 +49,8 @@ function process_data_from_db() {
         $out[$row->name][$key] = $value;
       }
     }
-    return $out;
   }
+  return $out;
 }
 
 function marathons_get_data_from_db() {

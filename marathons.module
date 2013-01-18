@@ -56,14 +56,7 @@ function marathons_menu() {
     'type' => MENU_LOCAL_TASK,
     'weight' => 2,
   );
-//  $items['admin/content/marathons/process'] = array(
-//    'title' => 'Process imported events',
-//    'page callback' => 'marathons_process_csv',
-//    'file' => 'includes/marathons.admin.inc',
-//    'access arguments' => array('import events'),
-//    'type' => MENU_LOCAL_TASK,
-//    'weight' => 2,
-//  );
+
   return $items;
 }
 
@@ -92,4 +85,24 @@ function marathons_markers_alter($markers) {
     }
   }
   return $markers;
+}
+
+/**
+ * Implements hook_ds_fields_info().
+ */
+function marathons_ds_fields_info($entity_type) {
+  $fields = array();
+
+  $defaults = array(
+    'file' => drupal_get_path('module', 'marathons') . '/includes/marathons.ds.inc',
+    'field_type' => DS_FIELD_TYPE_FUNCTION,
+    'ui_limit' => array('marathon|*'),
+  );
+
+  $fields['infowindow_show_details'] = array(
+    'title' => t('Show Marathon Details'),
+    'function' => 'infowindow_show_details_content',
+  ) + $defaults;
+
+  return array('node' => $fields);
 }
